@@ -11,9 +11,9 @@ server.use(express.json());
 
 // global ara yazılımlar ve kullanıcı routelarının buraya bağlanması gerekir
 
-server.use(logger);
+//server.use(logger);
 
-server.use("/api/users", usersRouter);
+server.use("/api/users", usersRouter, logger);
 
 server.get("/", (req, res) => {
   res.send(`<h2>Biraz ara yazılım yazalım!</h2>`);
